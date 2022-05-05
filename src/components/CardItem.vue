@@ -67,7 +67,6 @@ export default {
       <CCol md="8" class="text-center p-2">
         <CCardBody v-if="!this.show">
           {{ todo.task }}
-          {{ todo.done }}
         </CCardBody>
 
         <CCardBody v-if="this.show">

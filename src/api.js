@@ -12,9 +12,9 @@ export default {
       .put(`http://localhost:8081/api/update/${id}`, data)
       .then(({ data }) => data.done);
   },
-  postTodo: async (id, data) => {
+  postTodo: async (data) => {
     return await axios
-      .put(`http://localhost:8081/api/create/`, data)
+      .post(`http://localhost:8081/api/create/`, data)
       .then(({ data }) => data);
   },
   deleteID: async (id) => {

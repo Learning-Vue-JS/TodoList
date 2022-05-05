@@ -62,13 +62,14 @@
     />
   </div>
   <div v-if="addit">
-    <p>ToDo ekle</p>
+    <NewCardItem :handleGetAll="handleGetAll" />
   </div>
 </template>
 
 <script>
 import { ref } from "vue";
 import CardItem from "../components/CardItem.vue";
+import NewCardItem from "../components/NewCardItem.vue";
 import requests from "../api";
 import "@coreui/coreui/dist/css/coreui.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -77,6 +78,7 @@ export default {
   name: "Home",
   components: {
     CardItem,
+    NewCardItem,
     CNav,
     CNavItem,
     CNavLink,
@@ -90,10 +92,8 @@ export default {
 
   async created() {
     await this.handleGetAll();
-    console.log(this.data.filter((todo) => todo.done === true));
 
     await this.handleGetAllTrue();
-    console.log(this.data.filter((todo) => todo.done === false));
   },
 
   methods: {
