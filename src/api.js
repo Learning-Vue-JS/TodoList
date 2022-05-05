@@ -6,9 +6,15 @@ export default {
       .get(`http://localhost:8081/api/get`)
       .then(({ data }) => data);
   },
+
   getUpdate: async (id, data) => {
     return await axios
       .put(`http://localhost:8081/api/update/${id}`, data)
+      .then(({ data }) => data.done);
+  },
+  postTodo: async (id, data) => {
+    return await axios
+      .put(`http://localhost:8081/api/create/`, data)
       .then(({ data }) => data);
   },
   deleteID: async (id) => {

@@ -113,6 +113,3 @@ export default {
     </CRow>
   </CContainer>
 </template>
-
-<style scoped>
-</style>

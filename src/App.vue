@@ -1,9 +1,5 @@
 <script setup>
 import TodoList from "./components/TodoList.vue";
-import Menu from "./components/Menu.vue";
-import Card from "./components/Card.vue";
-import "@coreui/coreui/dist/css/coreui.min.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 </script>
 
 <template>
@@ -12,8 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
       <TodoList msg="Projects" />
     </div>
   </header>
-  <nav><Menu /></nav>
-  <div><Card /></div>
+  <router-view />
 </template>
 
 <style>
